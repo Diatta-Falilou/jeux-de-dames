@@ -1,0 +1,108 @@
+#include"header"
+/*----------------------------------NOTE----------------------------------------
+
+Coord Z = juste pour la FONCTION
+
+
+*/
+
+//-------------------------------MINI FONCTIONS-------------------------------
+//garder des pions dans le terrain et
+void limitesTerrain(coord coordZ){
+  if((coordZ.ligne >= 0) && (coordZ.ligne <= 10) && (coordZ.colonne <= 0) && (coordZ.colonne >= 10) )){
+    coupJouéPion();
+  }
+  else{
+    printf("recommener avec de bonnes valeur\n");
+    // sortir et redemander coord aexit;
+  }
+}
+
+
+void appelleCoord1() {
+  coord coordZ;
+  printf("les coordonnées du pion que vous voulez bouger svp\n");
+  scanf("%d \n %d \n", &coordZ.ligne , &coordZ.colonne );
+  limitesTerrain(coordA);
+  TestValide(coordA);
+}
+
+void appelleCoord2() {
+  coord coordZ;
+  printf("les coordonnées du pion que vous voulez bouger svp\n");
+  scanf("%d \n %d \n", &coordZ.ligne , &coordZ.colonne );
+  limitesTerrain(coordA);
+  //appelle la fonction qui joue le coup
+
+}
+
+
+
+
+
+void TestValide(coord coordZ){
+  if (coordZ.val == 1 || coordZ.val == 2){
+    coup();
+  }
+  else{
+    printf("position invalide \n");
+    break;
+  }
+}
+
+void pionValideDames(coord coordZ){
+  if (coordZ.val == 3 || coordZ.val == 4){
+    coupDames;
+  }
+  else{
+    printf("position invalide \n");
+    break;
+  }
+}
+
+
+//echange de valeur et non cordonnees
+void avancer(int coordA, int coordB){
+  int temp;
+
+  if (TestPlace(coordB)){
+    temp = coordA.val;
+    coordB.val = coordA.val;
+    coordA.val = Temp;
+    Decompte++;
+}
+
+//vérifie que le coup figure parmis les 4 choix proposé
+
+void CoupJoué(coord coordZ) {
+  coordX;
+  coordY;
+  coordW;
+  coordT;
+
+  if (coordX.val == 0 || coordY.val == 0 || coordW.val == 0 || coordT.val == 0) {
+    printf("veuillez lancer votre coup\n" );
+    //demander coord cible
+    appelleCoord2();
+  }
+}
+
+
+
+/*on regarde si il y a possbilité de jouer le coup*/
+void testOption (coord coordZ){
+  if ( &coord.val == 0  || &coord.val == 2){
+
+  }
+  else{
+    printf("coup impossible veuillez essayer autre chose\n");
+    coup();
+  }
+
+}
+//-----------------------------------COUP-----------------------------
+
+//---------------------------------------LES DAMMES----------------------------
+
+void coupDames (){
+  coord coordA , coordB;

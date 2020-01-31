@@ -1,0 +1,9 @@
+regles :
+
+pour manger un pion  : tjrs la selectionner en cibles
+faire la fonction qui reteste si possibilité de reprendre un pion a coté et mange direct et recommence
+
+pour se deplacer avec une dame : aller tjrs au fond sinon mouvement impossible a voir
+//Ne pas oublier le double sens pour les dames
+
+et sens inverse pour les pion du joueur 2

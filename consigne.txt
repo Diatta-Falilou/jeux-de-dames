@@ -1,0 +1,82 @@
+KH.Benchabane@gmail.com
+
+	objectif séance 1 : 23/01/2020
+
+-MAKEFILE
+
+-Avoir un tableau qui s'affiche avec les pieces respectives : testTab.c
+20 pieces par joueur / "1" pour le joueurUn / "3" pour le second et "0" pour les cases vides
+
+
+
+
+-Architecture à donner pour les coups : fichier "coup.c"
+
+
+	      selectioner un pion via demande de coordonnées(délimiter les coord et pions accessible via les numero et le joueur)
+	      avancer un pion avec simple et rendre sa place en "0"
+	      avancer avec une dame
+	      transformer un pion en dame + rejouer 1 tour pour les dames
+manger un pion avec un pion : (message erreur dans l impossibilité + recommencer)			     avancer via le systeme Largeur+ pour le joueurUn et Largeur- pour le joueurDeux
+
+
+
+
+- Regles pions : fichier header.h
+
+  1 = pion joueurUn
+  2 = dame joueurUn
+
+  3 = pion joueurDeux
+  4 = dame joueurDeux
+
+
+
+	/*----------------------------------NOTE----------------------------------------
+
+	Coord Z = juste pour la FONCTION
+
+
+	*/
+
+
+	--------------------------------------------------------29/01/2020------------------
+	void coupJoueur1 (){
+	coordA;
+	coordB;
+
+	  etape 1 : appelle de coord
+	  etape 1.a : test non sortit du tableau
+	  etape 1.b : demande des coord ciblé + test limites
+	                regarde si les cases sont occupé par 2 ou 0 ou 10 sinon annulé (faire cas pour chacun)
+	                    si cases ==  0 :
+																					sinon testDistanceV1 ()
+																							=>échange simple passer la main
+											si cases == 2 :coup impossible
+											si cases == 10 : changer en dames et passer la main
+	                  }
+
+fonctions neccessaires :
+appelleCoord();
+	testLimites(coordZ);
+appelleCoord2();
+	testCasesDemander(coordZ)
+		if ( cases == 0)
+			avancer();
+			else if cases == 10);
+				devenirDames();
+				else if cases == 2
+					testSaut(coordZ)
+
+
+
+testDistanceV1(coordA , coordB){
+	if( (coordB.colonne - coordA.colonne == 1) && (coordB.ligne - coordA.ligne == 1) ||  (coordB.colonne - coordA.colonne == 1) && (coordB.ligne - coordA.ligne == -1) )
+		avancer();
+		//passer la main
+}
+
+
+
+saut() un pion a la fois
+la personne doit absolument demander en diagonale sinon erreur
